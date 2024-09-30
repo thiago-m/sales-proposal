@@ -15,6 +15,12 @@ const ListItens = ({fn, title}) => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
+  const sendMail = async (e, id) => {
+    e.preventDefault(); 
+    await sendSaleProposal(id, token)
+    alert('Email enviado com sucesso!');
+  }
+
   return (
     <div className='list-card'>
       <h1>{title}</h1>
@@ -46,7 +52,7 @@ const ListItens = ({fn, title}) => {
                   </div>
                 )}
 
-                <Button disabled={loading} onClick={async (e) => {e.preventDefault(); await sendSaleProposal(item.id, token)}}>
+                <Button disabled={loading} onClick={async (e) => await sendMail(e, item.id)}>
                   {loading ? 'Carregando...' : 'Enviar por email'}
                 </Button>
               </>
