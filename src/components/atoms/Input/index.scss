@@ -1,0 +1,7 @@
+@use '../../../styles/colors.scss' as colors;
+
+.input, select {
+  border: 1px solid colors.$secondary-color;
+  border-radius: 5px;
+  padding: 5px 10px;
+}

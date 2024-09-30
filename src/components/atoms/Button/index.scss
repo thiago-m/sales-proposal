@@ -1,0 +1,15 @@
+@use '../../../styles/colors.scss' as colors;
+
+.button {
+  background-color: colors.$primary-color;
+  color: colors.$white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: colors.$primary-color-dark;
+  }
+}
