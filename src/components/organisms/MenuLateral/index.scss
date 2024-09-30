@@ -1,0 +1,50 @@
+@use '../../../styles/colors.scss' as colors;
+
+.menu-lateral {
+  width: 270px;
+  min-width: 270px;
+  max-width: 270px;
+  height: 100vh;
+  color: colors.$white;
+  font-size: 15pt;
+  background-color: #333;
+  padding: 50px 20px 25px;
+  list-style: none;
+  
+  li a:hover {
+    color: colors.$primary-color-dark;
+    text-decoration: none;
+  }
+  li:hover .sub-menu {
+    display: block;
+    li a:hover {
+      color: colors.$primary-color-dark
+    }
+  }
+  
+  .sub-menu {
+    display: none;
+    list-style: none;
+    margin-left: 15px;
+    
+    li a {
+      color: colors.$white
+    }
+  }
+
+  .user {
+    color: colors.$primary-color;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: colors.$white;
+}

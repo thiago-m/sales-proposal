@@ -1,0 +1,51 @@
+@use '../../../styles/colors' as colors;
+
+.form {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 25px 20px 35px;
+  margin: auto;
+  margin-top: 25px;
+  h1 {
+    margin: 10px;
+  }
+
+  .fields {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid colors.$primary-color-light;
+    padding-top: 20px;
+
+    .field {
+      margin: 10px;
+    }
+  }
+
+  Button {
+    margin-top: 20px;
+  }
+
+}
+
+.saleProposal {
+  margin: 30px 50px 0;
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    label {
+      margin: 5px 0px;
+      span {
+        margin: 0 5px;
+      }
+    }
+  }
+}
